@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <div style="color: #1297fc;">
+          <i class="ti-menu"></i>
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Ethereum Main NetWork
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Ethereum Main NetWork</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      </header>
+      <h1
+        style="
+          margin-top: 42px;
+          text-align: center;
+          color: #fefefe;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 29px;
+        "
+      >
+        Acount 1
+      </h1>
+      <p
+        style="
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 15px;
+          color: #fefefe;
+        "
+      >
+        {{ balance }} ETH
+      </p>
+      <div
+        style="
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 32px;
+          /* identical to box height */
+
+          text-align: center;
+
+          color: #fefefe;
+          background: #213848;
+          border-radius: 30px;
+          width: 115px;
+          height: 29px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        {{ senderAddress }}
+      </div>
+      <div class="arrayIcon">
+        <div class="wrapTextIcon">
+          <div class="icon">
+            <i class="ti-download"></i>
+          </div>
+          <p>Nhận</p>
+        </div>
+        <div class="wrapTextIcon">
+          <div class="icon">
+            <i class="ti-credit-card"></i>
+          </div>
+          <p>Mua</p>
+        </div>
+        <div class="wrapTextIcon" onclick="redirectToPage()">
+          <div class="icon">
+            <i class="ti-arrow-top-right"></i>
+          </div>
+          <p>Gửi</p>
+        </div>
+        <div class="wrapTextIcon">
+          <div class="icon">
+            <i class="ti-loop"></i>
+          </div>
+          <p>Hoán đổi</p>
+        </div>
+      </div>
+      <div class="textBody">
+        <h3>TOKEN</h3>
+        <h3>NFT</h3>
+      </div>
+      <div class="line"></div>
+      <div class="wrapIconMoney">
+        <div class="contentMoney">
+          <img src="{{ url_for('static', filename='money.svg') }}" alt="" />
+          <div class="wrapinforMoney">
+            <p>0 ETH</p>
+            <p>$0.00</p>
+          </div>
+        </div>
+        <img src="./iconRight.png" alt="" />
+      </div>
+      <div class="addMoney">
+        <h3
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: #fefefe;
+          "
+        >
+          Thêm tiền mã hóa để bắt đầu
+        </h3>
+        <button class="btnAddMoney">
+          <a href="">Mua ETH</a>
+        </button>
+        <p
+          style="
+            margin-top: 12px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 150.02%;
+            /* identical to box height, or 21px */
+
+            text-align: center;
+
+            color: #ffffff;
+          "
+        >
+          Không thấy Token của bạn?
+          <span style="color: #1297fc">Nhập Token</span>
+        </p>
+      </div>
+      <footer class="footer" style="color: #1297fc; margin: 16px;">
+        <div class="foot">
+          <i class="ti-wallet"></i>
+          <p>Ví</p>
+        </div>
+        <div class="foot" style="color: #fefefe;">
+          <i class="ti-world"></i>
+          <p>Trình duyệt</p>
+        </div>
+        <div class="foot" style="color: #fefefe;">
+          <i class="ti-world"></i>
+          <a href="/logout">Đăng xuất</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* ddoan nay la toan bo the tu set chieu cao cho no  */
+    .wrap {
+      background-color: #23272a;
+      width: 375px;
+      height: 667px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dropdown button {
+      background: #151618;
+      border-radius: 30px;
+      color: #fefefe;
+      width: 200px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    .arrayIcon {
+      width: 100%;
+      margin-top: 24px;
+      color: #1297fc;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wrapTextIcon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrapTextIcon img {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 5px;
+    }
+    .textBody {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+    }
+    .textBody h3 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+
+      color: #fefefe;
+    }
+    .line {
+      margin-top: 20px;
+      width: 120%;
+      position: relative;
+      height: 1px;
+      background-color: rgb(116, 109, 109);
+    }
+    .line::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+
+      border: 1px solid #1297fc;
+    }
+    .wrapIconMoney {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      position: relative;
+    }
+    .wrapIconMoney ::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -12%;
+      width: 120%;
+      border: 1px solid rgb(116, 109, 109);
+    }
+    .wrapIconMoney .contentMoney {
+      display: flex;
+      align-items: center;
+    }
+    .contentMoney img {
+      width: 30px;
+      height: 30px;
+      margin-top: -10px;
+    }
+    .wrapinforMoney {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      margin-left: 10px;
+      color: #fefefe;
+    }
+    .btnAddMoney {
+      margin-top: 10px;
+      background: #1297fc;
+      border-radius: 30px;
+      width: 100%;
+      border: none;
+      height: 47px;
+    }
+    .btnAddMoney a {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+
+      color: #fefefe;
+    }
+    .footer {
+      display: flex;
+      justify-content: space-around;
+    }
+    .foot {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    footer {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    function redirectToPage() {
+      window.location.href = "payment";
+    }
+  </script>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+  </head>
+  <body>
+    <div class="wrap">
+      <img src="{{ url_for('static', filename='Artboard 1 1.png') }}" alt="" />
+      <h1>Chào mừng bạn<br />trở lại!</h1>
+      <div class="wrapInput">
+        <form action="/login" method="post">
+          <label for="username" style="color: #fff; margin-bottom: 10px">Tài khoản</label>
+          <input
+            id="username"
+            name="username"
+            style="border: 1px solid #9a9a9a; border-radius: 5px; color: #9a9a9a"
+            type="text"
+            class="form-control"
+            placeholder="Tài khoản"
+            aria-label="Tài khoản"
+            aria-describedby="addon-wrapping"
+          />
+          <label for="password" style="color: #fff; margin-bottom: 10px"
+            >Mật khẩu</label
+          >
+          <input
+            id="password"
+            name="password"
+            style="border: 1px solid #9a9a9a; border-radius: 5px; color: #9a9a9a"
+            type="password"
+            class="form-control"
+            placeholder="Mật khẩu"
+            aria-label="Mật khẩu"
+            aria-describedby="addon-wrapping"
+          />
+          <p style="color: red">{{ error }}</p>
+          <!-- tu dien link -->
+          <input class="btn" style="color: #fefefe;" type="submit" value="MỞ KHÓA"/>
+        </form>
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            margin-top: 38px;
+            color: #ffffff;
+          "
+        >
+          Ví không mở khóa? Bạn có thể Xóa Xóa ví hiện tại và cài ví mới
+        </p>
+        <p
+          style="
+            color: #1297fc;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+          "
+        >
+          Cài lại ví
+        </p>
+      </div>
+    </div>
+  </body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* ddoan nay la toan bo the tu set chieu cao cho no  */
+    .wrap {
+      background-color: #23272a;
+      width: 375px;
+      height: 667px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .wrapInput {
+      width: 100%;
+    }
+    .wrapInput input {
+      background-color: transparent;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    img {
+      width: 164px;
+      height: 116px;
+      margin-top: 36px;
+    }
+    h1 {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 42px;
+      text-align: center;
+
+      color: #fefefe;
+    }
+    .btn {
+      width: 100%;
+      outline: none;
+      background: #1297fc;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 54px;
+      height: 52px;
+      padding: unset;
+    }
+    .btn a {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      text-decoration: none;
+      color: #fefefe;
+      /* display: block; */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"
+  ></script>
+</html>

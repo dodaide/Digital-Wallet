@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <title>Document</title>
+  </head>
+  <body>
+    {% if error %}
+        <h3 class="title">Giao dịch thất bại</h3>
+      {% else %}
+        <h3 class="title">Giao dịch thành công</h3>
+        <div class="wrapped">
+          <div class="content">
+            <p>Số tiền</p>
+            <p>{{ amount }} ETH</p>
+          </div>
+          <div class="content">
+            <p>Tới địa chỉ</p>
+            <p>{{ receiver }}</p>
+          </div>
+        </div>
+        <br />
+    {% endif %}
+        <div class="wrappedBtn">
+          <button type="button" class="btn">
+            <a href="./payment" class="direct">Giao dịch khác</a>
+          </button>
+          <br /><br />
+      <button type="button" class="btn">
+        <a href="./" class="direct">Trang chủ</a>
+      </button>
+    </div>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #23272a;
+      width: 375px;
+      height: 667px;
+    }
+    .wrapped {
+      padding: 34px;
+      margin-top: 80px;
+    }
+    .title {
+      color: #fefefe;
+      text-align: center;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: 36px;
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.5px solid #d4d4d4;
+      min-height: 30px;
+      margin-bottom: 6px;
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+    .content p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #d4d4d4;
+    }
+    .wrappedBtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 73px;
+    }
+    .btn {
+      width: 162px;
+      height: 47px;
+      background: #1297fc;
+      border-radius: 30px;
+      border: none;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+    }
+    .direct {
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fefefe !important;
+    }
+  </style>
+</html>

