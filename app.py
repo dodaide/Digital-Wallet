@@ -38,7 +38,10 @@ def logout():
 
 @app.route('/payment')
 def payment():
-    return render_template('payment.html', balance=getBalance())
+    if 'logged_in' in session and session['logged_in']:
+        return render_template('payment.html', balance=getBalance())
+    else:
+        return redirect(url_for('login'))
 
 @app.route('/verify', methods=['POST'])
 def verify():

@@ -17,25 +17,22 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='payment.css') }}">
   </head>
   <body>
     <div class="wrap">
       <h3
-        style="
-          font-family: 'Inter';
-          font-style: normal;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 19px;
-          text-align: center;
-
-          color: #fefefe;
-        "
+      class="tittleH3"
+       
       >
         Gửi cho
       </h3>
-      <p style="position: fixed; right: 20px; top: 32px; color: #1297fc;" onclick="returnToPage()">Hủy</p>
-      <p class="nameAccount">Ethereum Main NetWork</p>
+      <a class="returnPage" href="/">Hủy</a>
+      <div class="mainETH">
+        <div class="online-icon"></div>
+        <p class="nameAccount">Ethereum Main NetWork</p>
+      </div>
+      
       <div class="wrapInput">
         <label for="">From :</label>
         <div class="dropdown">
@@ -46,8 +43,10 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Acount 1 <br />
-            Số dư: {{ balance }} ETH
+            <div class="textDrop">
+             <p> Acount 1 </p>
+            <p>Số dư: {{ balance }} ETH</p>
+            </div>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -68,185 +67,9 @@
           <label for="amount">Số tiền</label>
           <input id="amount" type="text" name="amount" class="fill" placeholder="ETH">
         </div>
-        <input class="btnNext" style="color: #fefefe;" type="submit" value="Tiếp">
+        <input class="btnNext"  type="submit" value="Tiếp">
       </form>
   </body>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      text-decoration: none;
-    }
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    /* ddoan nay la toan bo the tu set chieu cao cho no  */
-    .wrap {
-      background-color: #23272a;
-      width: 375px;
-      height: 667px;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .nameAccount {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 15px;
-      /* identical to box height */
-
-      text-align: center;
-
-      color: #fefefe;
-    }
-    .wrapInput {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 20px;
-    }
-    .wrapInput label {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 15px;
-      line-height: 18px;
-      text-align: center;
-
-      color: #fefefe;
-    }
-    .dropdown {
-      border: 1px solid #9a9a9a;
-      border-radius: 5px;
-
-      background: transparent;
-    }
-    .dropdown button {
-      justify-content: center;
-      border: 1px solid #9a9a9a;
-      border-radius: 5px;
-      width: 250px;
-      height: 55px;
-      background-color: transparent;
-    }
-    .contentP {
-      margin-top: 20px;
-      height: 53px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: start;
-      border-bottom: 1px solid #3c3c3c;
-      border-top: 1px solid #3c3c3c;
-    }
-    .contentP p {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 18px;
-      text-align: center;
-      margin: 0;
-      color: #1297fc;
-    }
-    
-    .fill {
-      text-align: right;
-      padding-right: 12px;
-      width: 250px;
-      height: 51px;
-      border: 1px solid #9A9A9A;
-      border-radius: 5px;
-      background-color: #23272A;
-    }
-    .fill-to{
-      text-align: left;
-      padding-left: 12px;
-    }
-    .fill-to::placeholder {
-      font-size: 12px;
-    }
-    .fill {
-      color: #fefefe;
-    }
-    .fill::placeholder {
-      color: #9A9A9A;
-;
-    }
-    .fill::-ms-fill {
-      color: #fefefe;
-    }
-    .inforMoney {
-      margin-top: 20px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .inputShowNum {
-      border: 1px solid #9a9a9a;
-      border-radius: 5px;
-      width: 100%;
-      height: 55px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .inputShowNum p {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 16px;
-      /* identical to box height */
-
-      text-align: center;
-      margin: 0;
-      color: #e7e7e7;
-    }
-    .btnNext {
-      background: #1297fc;
-      border-radius: 30px;
-      width: 326px;
-      height: 47px;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      bottom: 0;
-      margin-bottom: 20px;
-    }
-    .btnNext a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 1005;
-      text-decoration: none;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 15px;
-      line-height: 18px;
-      text-align: center;
-
-      color: #fefefe;
-    }
-  </style>
   <script>
-    function returnToPage() {
-      window.location.href = "account";
-    }
-    function nextToPage() {
-      window.location.href = "verify";
-    }
   </script>
 </html>

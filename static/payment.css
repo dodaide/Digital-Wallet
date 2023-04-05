@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ddoan nay la toan bo the tu set chieu cao cho no  */
+.wrap {
+  background-color: #23272a;
+  width: 375px;
+  height: 667px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.tittleH3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #fefefe;
+}
+.mainETH {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.online-icon {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #43F64A;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  margin-right: 4px;
+}
+
+.nameAccount {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #fefefe;
+  display: inline-block;
+}
+.returnPage {
+  color: #1297fc;
+  position: absolute;
+  right: 24px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  margin-top: 10px;
+}
+.wrapInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+.wrapInput label {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  margin-right: 10px;
+  color: #fefefe;
+}
+.dropdown {
+  border: 1px solid #9a9a9a;
+  border-radius: 5px;
+  position: relative;
+  background: transparent;
+}
+.dropdown ::after {
+  position: absolute;
+  right: 20px;
+}
+.textDrop {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-size: 14px;
+}
+.textDrop p {
+  margin: 0;
+}
+.dropdown button {
+  justify-content: center;
+  border: 1px solid #9a9a9a;
+  border-radius: 5px;
+  width: 250px;
+  height: 55px;
+  background-color: transparent;
+}
+.contentP {
+  margin-top: 20px;
+  height: 53px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border-bottom: 1px solid #3c3c3c;
+  border-top: 1px solid #3c3c3c;
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+  text-decoration-color: #1297FC;
+}
+.contentP p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0;
+  color: #1297fc;
+}
+
+.fill {
+  text-align: right;
+  padding-right: 12px;
+  width: 250px;
+  height: 51px;
+  border: 1px solid #9a9a9a;
+  border-radius: 5px;
+  background-color: #23272a;
+}
+.fill-to {
+  text-align: left;
+  padding-left: 12px;
+}
+.fill-to::placeholder {
+  font-size: 12px;
+}
+.fill {
+  color: #fefefe;
+}
+.fill::placeholder {
+  color: #9a9a9a;
+}
+.fill::-ms-fill {
+  color: #fefefe;
+}
+.inforMoney {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inputShowNum {
+  border: 1px solid #9a9a9a;
+  border-radius: 5px;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputShowNum p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  /* identical to box height */
+
+  text-align: center;
+  margin: 0;
+  color: #e7e7e7;
+}
+.btnNext {
+  background: #1297fc;
+  border-radius: 30px;
+  width: 326px;
+  height: 47px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 18px;
+  position: absolute;
+  color: #fff;
+  font-weight: 700;
+}
+form {
+  width: 326px;
+}

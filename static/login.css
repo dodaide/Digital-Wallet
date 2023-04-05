@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ddoan nay la toan bo the tu set chieu cao cho no  */
+.wrap {
+  background-color: #23272a;
+  width: 375px;
+  height: 667px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.wrapInput {
+  width: 100%;
+}
+.wrapInput label {
+  color: #fff;
+  margin-bottom: 10px;
+}
+.wrapInput input {
+  width: 100%;
+  background-color: transparent;
+  padding: 12px;
+  color: #fff;
+  border-radius: 5px;
+}
+.lablePass {
+  margin-top: 10px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.textExplain {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 30px;
+  color: #ffffff;
+}
+.textMemory {
+  color: #1297fc !important;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin: 0;
+}
+.textInput {
+  border: 1px solid #9a9a9a;
+  border-radius: 5px;
+  color: #9a9a9a;
+}
+img {
+  width: 164px;
+  height: 116px;
+}
+h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 42px;
+  text-align: center;
+
+  color: #fefefe;
+}
+.bx-menu {
+}
+.btn {
+  width: 100%;
+  outline: none;
+  background: #1297fc !important;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  height: 52px;
+  border-radius: 30px !important;
+  padding: unset;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  color: #fefefe;
+}
+

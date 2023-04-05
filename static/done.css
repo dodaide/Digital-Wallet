@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ddoan nay la toan bo the tu set chieu cao cho no  */
+.wrap {
+  background-color: #23272a;
+  width: 375px;
+  height: 667px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.title {
+  color: #fefefe;
+  text-align: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 36px;
+}
+.wrapInforTransaction {
+  width: 100%;
+  margin-top: 80px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.5px solid #d4d4d4;
+  min-height: 30px;
+  margin-top: 20px;
+}
+.content p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #d4d4d4;
+  ;
+}
+.wrappedBtn {
+  position: absolute;
+  bottom: 73px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 120px;
+  justify-content: space-between;
+}
+.btn {
+  width: 162px;
+  height: 47px;
+  background: #1297fc;
+  border-radius: 30px;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
+.btn {
+  /* margin-top: -20px; */
+}
+.direct {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fefefe !important;
+}

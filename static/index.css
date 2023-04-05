@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ddoan nay la toan bo the tu set chieu cao cho no  */
+.wrap {
+  background-color: #23272a;
+  width: 375px;
+  height: 667px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu {
+  width: 27px;
+  height: 18px;
+  font-size: 40px;
+  color: #1297fc;
+}
+header {
+  width: 100%;
+  position: relative;
+  justify-content: center;
+}
+.menu-header {
+  line-height: 1;
+}
+.dropdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.accountNum {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #fefefe;
+}
+.textSenderAddress {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 32px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #fefefe;
+  background: #213848;
+  border-radius: 30px;
+  width: 115px;
+  height: 29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titltleAcount {
+  margin-top: 42px;
+  text-align: center;
+  color: #fefefe;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+.icon {
+  background: #1297fc;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+.icon span {
+  font-size: 20px;
+}
+.dropdown button {
+  background: #151618;
+  border-radius: 30px;
+  color: #fefefe;
+  width: 200px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+}
+.arrayIcon {
+  width: 100%;
+  margin-top: 24px;
+  color: #1297fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30px;
+}
+.arrayIcon .wrapTextIcon, 
+.arrayIcon .wrapTextIconLink {
+  flex: 1;
+}
+.wrapTextIconLink p{
+  text-align: center;
+}
+.arrowRight {
+  font-size: 24px;
+  color: #fff;
+}
+.textAddMoney {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #fefefe;
+}
+.textToken {
+  margin-top: 12px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150.02%;
+  /* identical to box height, or 21px */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+.primeTextToken {
+  color: #1297fc;
+}
+.footer {
+  color: #1297fc;
+  margin: 16px;
+  margin-top: 26px;
+  position: relative;
+}
+footer div {
+  flex: 1;
+}
+.footer::after {
+  content: "";
+  position: absolute;
+  width: calc(100% + 40px);
+  height: 1px;
+  left: -20px;
+  top: -20px;
+  background-color: #3c3c3c;
+}
+.foot {
+  color: #1297fc;
+  color: #fefefe;
+}
+.foot a {
+  text-decoration: none;
+}
+.foot span {
+  color: #1297fc;
+}
+.foot p {
+  color: #1297fc;
+  margin: 0;
+}
+.wrapTextIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.wrapTextIconLink {
+  text-decoration: none;
+  color: #1297fc;
+}
+.wrapTextIcon img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+.textBody {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.textBody h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #fefefe;
+}
+.line {
+  margin-top: 20px;
+  width: 100%;
+  position: relative;
+  height: 1px;
+  background-color: rgb(116, 109, 109);
+}
+.line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: calc(50% + 20px);
+
+  border: 1px solid #1297fc;
+}
+.wrapIconMoney {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  position: relative;
+}
+.wrapIconMoney ::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: -20px;
+  width: calc(100% + 40px);
+  border: 1px solid #3c3c3c;
+}
+.wrapIconMoney .contentMoney {
+  display: flex;
+  align-items: center;
+}
+.contentMoney img {
+  width: 30px;
+  height: 30px;
+  margin-top: -10px;
+}
+.wrapinforMoney {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  margin-left: 10px;
+  color: #fefefe;
+}
+.ETH {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+.dollar {
+  font-size: 12px;
+  line-height: 15px;
+  margin-bottom: 14px;
+}
+.btnAddMoney {
+  margin-top: 10px;
+  background: #1297fc;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  height: 47px;
+}
+.btnAddMoney a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 313px;
+  height: 100%;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+
+  color: #fefefe;
+}
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.foot span,
+.foot p,
+.foot a {
+  color: #fff;
+}
+
+footer div:first-child span,
+footer div:first-child p {
+  color: #1297fc;
+}
+
+
